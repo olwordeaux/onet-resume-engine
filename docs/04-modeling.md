@@ -11,11 +11,13 @@ Skills, knowledge, software, and tasks are analyzed from the tidy CSV datasets.
 
 ## Career Transition Rules
 
-`recommend_transition_pathways.py` marks a pair as a recommended pathway only when all conditions pass:
+Transition pathways are identified when occupation pairs meet these thresholds:
 
 - Software Jaccard similarity is at least 25%.
 - Knowledge Jaccard similarity is at least 25%.
 - Skills weighted cosine similarity is at least 75%.
+
+These rules are implemented in the core analysis pipeline.
 
 ## Composite Profile
 
