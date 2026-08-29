@@ -12,7 +12,7 @@ Convert O*NET occupation data into normalized profiles, analysis datasets, and r
 | 2. Ingest data | Download five O*NET API payloads for each code: overview, tasks, skills, technology skills, and knowledge. | `onet_engine/ingestion.py` |
 | 3. Normalize data | Convert the separate API payloads into one JSON profile per occupation and keep the top 10 ranked items. | `onet_engine/normalize.py` |
 | 4. Build tidy datasets | Flatten normalized profiles into task, software, and capability CSV files for analysis. | `onet_engine/build_ml_vectors.py` |
-| 5. Analyze occupations | Compare skills, knowledge, software, and tasks; calculate similarity and transition pathways. | `analyze_skill_overlap.py`, `analyze_csv_overlap.py`, `recommend_transition_pathways.py` |
+| 5. Analyze occupations | Compare skills, knowledge, software, and tasks; calculate similarity and transition pathways. | Built-in analysis in `onet_engine/build_ml_vectors.py` |
 | 6. Generate profiles | Render occupation or composite profiles as Markdown. | `onet_engine/render_markdown.py`, `build_it_consultant_profile.py` |
 | 7. Audit data integrity | Check that raw payloads, normalized profiles, and tidy CSVs are present and internally consistent. | `generate_report.py`, `tests/test_resume_integrity.py` |
 | 8. Validate changes | Run automated tests before committing changes. | `python -m pytest tests` or `make test` |
